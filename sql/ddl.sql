@@ -12,7 +12,7 @@ CREATE TABLE Employee(
     NVARCHAR(50) LastName,
     int SSN,
     int DeptID,
-    CONSTRAINT fk_dept (DeptID) FOREIGN
+    CONSTRAINT fk_dept (DeptID) FOREIGN key dbo.Department(DepartmentID)
 
 )
 
@@ -20,5 +20,12 @@ CREATE TABLE Employee(
 
 Create table empDetails(
     int empDetailsId Identity(1.1) PRIMARY KEY,
-
+    int EmployeeID,
+    int Salary,
+    NVARCHAR(50) Addressline1,
+    NVARCHAR(50) Addressline2,
+    NVARCHAR(50) city,
+    NVARCHAR(50) [state],
+    NVARCHAR(50) country,
+    CONSTRAINT fk_emply (employeeID) FOREIGN key dbo.Employee(EmployeeID)
 )
