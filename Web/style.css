@@ -1,0 +1,17 @@
+*{
+    background-color: bisque;
+    text-align: center;
+}
+
+.column{
+    float: left;
+    width: 20%;
+}
+.column2{
+    float: right;
+    width:80%;
+}
+.table
+{
+    float: center;
+}
